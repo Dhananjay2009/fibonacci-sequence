@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int fib_recursive(int n)
+{
+    if (n == 0 || n == 1)
+    {
+        return n;
+    }
+    else
+    {
+        return fib_recursive(n - 1) + fib_recursive(n - 2);
+    }
+}
+int main()
+{
+    int num;
+    printf("Enter the number you want fib_recursive of\n");
+    scanf("%d", &num);
+    printf("The recursive fibonacci of %d id %d\n", num, fib_recursive(num));
+
+    return 0;
+}
